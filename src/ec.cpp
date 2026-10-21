@@ -25,8 +25,8 @@ u_int16_t f1_pwm = 0x1805;
 u_int16_t f1_tach_low = 0x1820;
 u_int16_t f1_tach_hi = 0x1821;
 
-u_int16_t filtered_temp[4] = {0x8721, 0x8725, 0x8729, 0x872D};
-u_int16_t raw_temp[4] = {0x8720, 0x8724, 0x8728, 0x872C};
+u_int16_t filtered_temp[2] = {0x8721, 0x8725};
+u_int16_t raw_temp[2] = {0x8720, 0x8724};
 
 
 int getFanInfos(int fan, int* arr){

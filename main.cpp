@@ -30,6 +30,9 @@ int main(int argc, char** argv){
     else if(!strcmp(argv[1], "--auto")){
         setAuto();
     }
+    else if(!strcmp(argv[1], "--probe")){
+        showInfo();
+    }
     else{
         cout<<"Sintax error: use --help to guide yourself\n";
     }

@@ -1,12 +1,17 @@
 #include "ec.h"
-
 using namespace std;
 
-int main(int argc, char** argv){
+const char* dev_port = "/dev/port";
 
-    writexData(f0_raw, atoi(argv[1]));
-    writexData(f1_raw, atoi(argv[2]));
-    
+// ---- EC MEMORY MAPPING ----
+const u_int8_t status_port = 0x6C;
+const u_int8_t data_port = 0x68;
+
+u_int16_t f0_raw = 0x870E;
+u_int16_t f1_raw = 0x870F;
+
+int getRAW(int fan){
+    return readxData(!fan ? f0_raw : f1_raw); 
 }
 
 int setRAW(int fan, int value){

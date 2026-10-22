@@ -3,10 +3,11 @@ using namespace std;
 
 const char* dev_port = "/dev/port";
 
-// ---- EC MEMORY MAPPING ----
+// ---- EC PORTS MAPPING ----
 const u_int8_t status_port = 0x6C;
 const u_int8_t data_port = 0x68;
 
+// ---- EC MEMORY MAPPING ----
 u_int16_t f0_rpm_hi = 0x8700;
 u_int16_t f0_rpm_low = 0x8701;
 u_int16_t f0_duty = 0x8704;
@@ -45,16 +46,15 @@ int getFanInfos(int fan, int* arr){
 }
 
 int getTemps(int* arr){
-    for(int i=0; i<4; i++)
+    for(int i=0; i<2; i++){
         arr[i] = readxData(filtered_temp[i]);
-    for(int i=4; i<8; i++)
-        arr[i] = readxData(raw_temp[i]);
-
-    return 0;
+        arr[i+2] = readxData(raw_temp[i]);
+    }
+    return 1;
 }
 
 int setAuto(){
-    command(0xD5, 0x10);
+    command(0xD5, 0x10); //This should set MAN0 and MAN1 to 0 and maybe something else
     setRAW(0, 0);
     setRAW(1, 0);
     return 1;

@@ -13,3 +13,5 @@
 #endif
 
 int getCameraPrivacy();
+int getKeyBright();
+int setKeyBright(int level);

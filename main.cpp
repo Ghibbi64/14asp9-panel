@@ -3,6 +3,7 @@
 #include <sys/wait.h>
 #include "ec.h"
 #include "ui_old.h"
+#include "other.h"
 
 using namespace std;
 
@@ -32,6 +33,9 @@ int main(int argc, char** argv){
     }
     else if(!strcmp(argv[1], "--probe")){
         showInfo();
+    }
+    else if(!strcmp(argv[1], "--backlight")){
+        setKeyBright(atoi(argv[2]));
     }
     else{
         cout<<"Sintax error: use --help to guide yourself\n";

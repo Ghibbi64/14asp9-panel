@@ -8,8 +8,6 @@
 #include <unistd.h>
 #include <cstdint>
 
-#endif
-
 int getFanInfos(int fan, int* arr);
 int getTemps(int* arr);
 int getRAW(int fan);
@@ -20,3 +18,5 @@ int writexData(u_int16_t addr, u_int8_t value);
 int readxData(u_int16_t addr);
 void waitIBF(int fd);
 void waitOBF(int fd);
+
+#endif

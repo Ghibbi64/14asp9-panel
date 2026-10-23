@@ -1,9 +1,10 @@
 #include<iostream>
 #include<cstdlib>
+#include <cstring>
 #include <sys/wait.h>
-#include "ec.h"
+#include "ec/ec.h"
 #include "ui_old.h"
-#include "other.h"
+#include "ec/other.h"
 
 using namespace std;
 

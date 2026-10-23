@@ -1,6 +1,6 @@
 #include "ui_old.h"
-#include "ec.h"
-#include "other.h"
+#include "ec/ec.h"
+#include "ec/other.h"
 
 using namespace std;
 

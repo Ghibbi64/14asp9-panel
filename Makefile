@@ -1,6 +1,6 @@
 TARGET := 14asp9-panel
 
-SRCS := main.cpp $(wildcard src/*.cpp)
+SRCS := main.cpp $(wildcard src/*.cpp src/*/*.cpp)
 OBJS := $(SRCS:%.cpp=build/%.o)
 DEPS := $(OBJS:.o=.d)
 

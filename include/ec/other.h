@@ -10,8 +10,8 @@
 #include <linux/videodev2.h>
 #include <sys/ioctl.h>
 
-#endif
-
 int getCameraPrivacy();
 int getKeyBright();
 int setKeyBright(int level);
+
+#endif

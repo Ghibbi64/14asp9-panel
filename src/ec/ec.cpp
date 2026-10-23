@@ -1,4 +1,4 @@
-#include "ec.h"
+#include "ec/ec.h"
 using namespace std;
 
 const char* dev_port = "/dev/port";

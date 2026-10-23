@@ -1,5 +1,5 @@
-#include "other.h"
-#include "ec.h"
+#include "ec/other.h"
+#include "ec/ec.h"
 
 int getCameraPrivacy(){
 

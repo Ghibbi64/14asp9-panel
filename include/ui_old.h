@@ -8,6 +8,6 @@
 #include <unistd.h>
 #include <cstdint>
 
-#endif
-
 void showInfo();
+
+#endif
